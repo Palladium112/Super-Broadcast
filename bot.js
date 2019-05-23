@@ -762,15 +762,6 @@ client.on('guildCreate', guild => {
   }
 })
 
-client.on('message', message => {
-	message.react('💖')
-    if (message.content.startsWith("<@580916581702565889>"))
-    
-    message.reply("💖|**ان الله و ملائكته يصلون على النبى يا ايها الذين امنوا صلوا عليه وسلموا تسليما**");
-    
-
-});
-
 client.on('guildCreate', guild => {
     var embed = new Discord.RichEmbed()
     .setColor(0x5500ff)
