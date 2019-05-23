@@ -763,11 +763,10 @@ client.on('guildCreate', guild => {
 })
 
 client.on('message', message => {
-	 message.channel.sendEmbed(recembed).then(msg => { 
-     msg.react('💖')
     if (message.content.startsWith("<@580916581702565889>"))
     
     message.reply(":wave: | ** ان الله و ملائكته يصلون على النبى يا ايها الذين امنوا صلوا عليه وسلموا تسليما**");
+	msg.react('💖')
     
       
 });
