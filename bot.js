@@ -19,20 +19,18 @@ client.on("message", async message => {
             .setColor("RANDOM")
             .setThumbnail(message.author.avatarURL)
             .setDescription(`:robot: *** Bot orders | اوامر بوت *** :robot:
-
-			----------------------------------	  
-			:mega: ``-`` ${prefix}**bc  --> 『 برودكاست الكل 』**
-			:mega: ``-`` ${prefix}**bco --> 『 برودكاست وان الاين 』**
-			:mega: ``-`` ${prefix}**bcs --> 『 يرودكاست كرسال عادى 』**
-			:mega: ``-`` ${prefix}**bca --> 『 برودكاست الى رتب معين 』**
-			:mega: ``-`` ${prefix}**bce --> 『 برودكاست متعداد بركشن 』**
-			:mega: ``-`` ${prefix}**inv --> 『 دعوه بوت 』**
-			:mega: ``-`` ${prefix}**Sup --> 『 دعم الفنى الى بوت 』**
-			:mega: ``-`` ${prefix}**bot --> 『 معلومات بوت 』**`);
+----------------------------------	  
+:mega: ``-`` ${prefix}**bc  --> 『 برودكاست الكل 』**
+:mega: ``-`` ${prefix}**bco --> 『 برودكاست وان الاين 』**
+:mega: ``-`` ${prefix}**bcs --> 『 يرودكاست كرسال عادى 』**
+:mega: ``-`` ${prefix}**bca --> 『 برودكاست الى رتب معين 』**
+:mega: ``-`` ${prefix}**bce --> 『 برودكاست متعداد بركشن 』**
+:mega: ``-`` ${prefix}**inv --> 『 دعوه بوت 』**
+:mega: ``-`` ${prefix}**Sup --> 『 دعم الفنى الى بوت 』**
+:mega: ``-`` ${prefix}**bot --> 『 معلومات بوت 』**`);
             message.channel.sendEmbed(help);
     }
 });
-
 const adminprefix = "!";
 const devs = ['564414567946387487']
 client.on('message', message => {
