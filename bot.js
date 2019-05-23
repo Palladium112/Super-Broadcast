@@ -26,9 +26,7 @@ client.on('message', message => {
 :mega: ${prefix}**bce --> 『 برودكاست متعداد بركشن 』**
 :mega: ${prefix}**inv --> 『 دعوه بوت 』**
 :mega: ${prefix}**Sup --> 『 دعم الفنى الى بوت 』**
-:mega: ${prefix}**bot --> 『 معلومات بوت 』**
-
-`Super Broadcast``);
+:mega: ${prefix}**bot --> 『 معلومات بوت 』**`);
 
 
   }
