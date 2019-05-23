@@ -18,7 +18,7 @@ client.on('message', message => {
     let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setFooter(`:robot: *** Bot orders | اوامر بوت *** :robot:
-----------------------------------	  
+
 :mega: ``-`` ${prefix}**bc  --> 『 برودكاست الكل 』**
 :mega: ``-`` ${prefix}**bco --> 『 برودكاست وان الاين 』**
 :mega: ``-`` ${prefix}**bcs --> 『 يرودكاست كرسال عادى 』**
