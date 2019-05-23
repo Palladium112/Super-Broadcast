@@ -14,21 +14,88 @@ client.user.setStatus("dnd")
 });
 
 client.on('message', message => {
-  if (message.author.bot) return;
-  if (message.content === prefix + "help") {
-      message.author.send(`:robot: *** Bot orders | اوامر بوت *** :robot:
-----------------------------------	  
-:mega: ``-`` ${prefix}**bc  --> 『 برودكاست الكل 』**
-:mega: ``-`` ${prefix}**bco --> 『 برودكاست وان الاين 』**
-:mega: ``-`` ${prefix}**bcs --> 『 يرودكاست كرسال عادى 』**
-:mega: ``-`` ${prefix}**bca --> 『 برودكاست الى رتب معين 』**
-:mega: ``-`` ${prefix}**bce --> 『 برودكاست متعداد بركشن 』**
-:mega: ``-`` ${prefix}**inv --> 『 دعوه بوت 』**
-:mega: ``-`` ${prefix}**Sup --> 『 دعم الفنى الى بوت 』**
-:mega: ``-`` ${prefix}**bot --> 『 معلومات بوت 』**`);
+    if (message.author.bot) return;
+     if (message.content  === prefix + "help") {
+          const embed = new Discord.RichEmbed()
+ 
+ 
+   .setColor('RANDOM')
+    .setTimestamp()
+	
+ .addField(`🇸🇦 | لرسالة المساعدة باللغة العربية`,' ‎ ')
+ .addField(`🇺🇸 | message on English`,' ‎ ')
+ .setFooter('help message')
+ 
+ 
+   message.channel.send({embed});
+ 
+ 
+    }
+});
 
+.then(() => msg.react('🇸🇦'))
+.then(() => msg.react('🇺🇸'))
+ 
+client.on('message', message => {
+    if (message.author.bot) return;
+     if (message.content  === react "🇸🇦") {
+          const embed = new Discord.RichEmbed()
+ 
+ 
+   .setColor('RANDOM')
+    .setTimestamp()
+ 
+ .addField(":robot: *** Bot orders *** :robot:")
+ .addField("----------------------------------")
+ .addField(":mega: ``-`` ${prefix}**bc  --> 『 برودكاست الكل 』**")
+ .addField(":mega: ``-`` ${prefix}**bco --> 『 برودكاست وان الاين 』**")
+ .addField(":mega: ``-`` ${prefix}**bcs --> 『 يرودكاست كرسال عادى 』**")
+ .addField(":mega: ``-`` ${prefix}**bca --> 『 برودكاست الى رتب معين 』**")
+ .addField(":mega: ``-`` ${prefix}**bce --> 『 برودكاست متعداد بركشن 』**")
+ .addField(":mega: ``-`` ${prefix}**inv --> 『 دعوه بوت 』**")
+ .addField(":mega: ``-`` ${prefix}**Sup --> 『 دعم الفنى الى بوت 』**")
+ .addField(":mega: ``-`` ${prefix}**bot --> 『 معلومات بوت 』**")
+ 
+ .setFooter('رسالة المساعدة باللغة العربية')
+ 
+ 
+   message.channel.send({embed});
+ 
+ 
+    }
+});
 
-  }
+   client.on('message', message => {
+    if (message.author.bot) return;
+     if (message.content  === react "🇺🇸") {
+          const embed = new Discord.RichEmbed()
+ 
+ 
+   .setColor('RANDOM')
+    .setTimestamp()
+ 
+ .addField("╔[❖════════════❖]╗",' ‎ ')
+ .addField("      general Commands     ",' ‎ ')
+ .addField("  ╚[❖════════════❖]╝`⦁",' ‎ ')
+ .addField("❖ #roll <number> ➾ for make a roll ⦁",' ‎ ')
+ .addField("❖ #member ➾ for members info ⦁",' ‎ ')
+ .addField("❖ #av ➾ for see You Img ⦁",' ‎ ')
+ .addField("❖ #ser-av ➾ for see Server img ⦁",' ‎ ')
+ .addField("❖ #uptime ➾ time bot online ⦁",' ‎ ')
+ .addField("❖ #id ➾ for see You info ⦁",' ‎ ')
+ .addField("❖ #inv ➾ make a invite link ⦁",' ‎ ')
+ .addField("❖ #own ➾ Owner Of bot⦁",' ‎ ')
+ .addField("❖ #top inv ➾ for see Tov invite ⦁",' ‎ ')
+ .addField("❖ ❖ #ping ➾ for see Ping of bot ⦁",' ‎ ')
+ .addField("❖ ❖ #server ➾ for server info ⦁",' ‎ ')
+ 
+ .setFooter('help in EN')
+ 
+ 
+   message.channel.send({embed});
+ 
+ 
+    }
 });
 
 const adminprefix = "!";
