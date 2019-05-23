@@ -13,32 +13,23 @@ client.user.setGame(`${prefix}help`,"http://twitch.tv/Death Shop")
 client.user.setStatus("dnd")
 });
 
-client.on('message', message => {
-    if (message.author.bot) return;
-     if (message.content  === prefix + "help") {
-          const embed = new Discord.RichEmbed()
- 
- 
-   .setColor('RANDOM')
-    .setTimestamp()
- 
- .addField(":robot: *** Bot orders *** :robot:")
- .addField("----------------------------------")
- .addField(":mega: ``-`` ${prefix}**bc  --> 『 برودكاست الكل 』**")
- .addField(":mega: ``-`` ${prefix}**bco --> 『 برودكاست وان الاين 』**")
- .addField(":mega: ``-`` ${prefix}**bcs --> 『 يرودكاست كرسال عادى 』**")
- .addField(":mega: ``-`` ${prefix}**bca --> 『 برودكاست الى رتب معين 』**")
- .addField(":mega: ``-`` ${prefix}**bce --> 『 برودكاست متعداد بركشن 』**")
- .addField(":mega: ``-`` ${prefix}**inv --> 『 دعوه بوت 』**")
- .addField(":mega: ``-`` ${prefix}**Sup --> 『 دعم الفنى الى بوت 』**")
- .addField(":mega: ``-`` ${prefix}**bot --> 『 معلومات بوت 』**")
- 
- .setFooter('رسالة المساعدة باللغة العربية')
- 
- 
-   message.channel.send({embed});
- 
- 
+client.on("message", async message => {
+    if(message.content.startsWith(prefix + "help")) {
+        let help = new Discord.RichEmbed()
+            .setColor("RANDOM")
+            .setThumbnail(message.author.avatarURL)
+            .setDescription(`:robot: *** Bot orders | اوامر بوت *** :robot:
+
+			----------------------------------	  
+			:mega: ``-`` ${prefix}**bc  --> 『 برودكاست الكل 』**
+			:mega: ``-`` ${prefix}**bco --> 『 برودكاست وان الاين 』**
+			:mega: ``-`` ${prefix}**bcs --> 『 يرودكاست كرسال عادى 』**
+			:mega: ``-`` ${prefix}**bca --> 『 برودكاست الى رتب معين 』**
+			:mega: ``-`` ${prefix}**bce --> 『 برودكاست متعداد بركشن 』**
+			:mega: ``-`` ${prefix}**inv --> 『 دعوه بوت 』**
+			:mega: ``-`` ${prefix}**Sup --> 『 دعم الفنى الى بوت 』**
+			:mega: ``-`` ${prefix}**bot --> 『 معلومات بوت 』**`);
+            message.channel.sendEmbed(help);
     }
 });
 
