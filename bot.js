@@ -21,29 +21,6 @@ client.on('message', message => {
  
    .setColor('RANDOM')
     .setTimestamp()
-	
- .addField(`🇸🇦 | لرسالة المساعدة باللغة العربية`,' ‎ ')
- .addField(`🇺🇸 | message on English`,' ‎ ')
- .setFooter('help message')
- 
- 
-   message.channel.send({embed});
- 
- 
-    }
-});
-
-.then(() => msg.react('🇸🇦'))
-.then(() => msg.react('🇺🇸'))
- 
-client.on('message', message => {
-    if (message.author.bot) return;
-     if (message.content  === react "🇸🇦") {
-          const embed = new Discord.RichEmbed()
- 
- 
-   .setColor('RANDOM')
-    .setTimestamp()
  
  .addField(":robot: *** Bot orders *** :robot:")
  .addField("----------------------------------")
@@ -57,39 +34,6 @@ client.on('message', message => {
  .addField(":mega: ``-`` ${prefix}**bot --> 『 معلومات بوت 』**")
  
  .setFooter('رسالة المساعدة باللغة العربية')
- 
- 
-   message.channel.send({embed});
- 
- 
-    }
-});
-
-   client.on('message', message => {
-    if (message.author.bot) return;
-     if (message.content  === react "🇺🇸") {
-          const embed = new Discord.RichEmbed()
- 
- 
-   .setColor('RANDOM')
-    .setTimestamp()
- 
- .addField("╔[❖════════════❖]╗",' ‎ ')
- .addField("      general Commands     ",' ‎ ')
- .addField("  ╚[❖════════════❖]╝`⦁",' ‎ ')
- .addField("❖ #roll <number> ➾ for make a roll ⦁",' ‎ ')
- .addField("❖ #member ➾ for members info ⦁",' ‎ ')
- .addField("❖ #av ➾ for see You Img ⦁",' ‎ ')
- .addField("❖ #ser-av ➾ for see Server img ⦁",' ‎ ')
- .addField("❖ #uptime ➾ time bot online ⦁",' ‎ ')
- .addField("❖ #id ➾ for see You info ⦁",' ‎ ')
- .addField("❖ #inv ➾ make a invite link ⦁",' ‎ ')
- .addField("❖ #own ➾ Owner Of bot⦁",' ‎ ')
- .addField("❖ #top inv ➾ for see Tov invite ⦁",' ‎ ')
- .addField("❖ ❖ #ping ➾ for see Ping of bot ⦁",' ‎ ')
- .addField("❖ ❖ #server ➾ for server info ⦁",' ‎ ')
- 
- .setFooter('help in EN')
  
  
    message.channel.send({embed});
