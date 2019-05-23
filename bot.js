@@ -14,11 +14,11 @@ client.user.setStatus("dnd")
 });
 
 client.on('message', message => {
-    if (message.content === "!help") {
-    let embed = new Discord.RichEmbed()
-  .setAuthor(message.author.username)
-  .setFooter(`:robot: *** Bot orders | اوامر بوت *** :robot:
-
+  if (message.author.bot) return;
+  if (message.content === prefix + "help") {
+      message.author.send(`
+:robot: *** Bot orders | اوامر بوت *** :robot:
+----------------------------------	  
 ${prefix}**bc  --> 『 برودكاست الكل 』**
 ${prefix}**bco --> 『 برودكاست وان الاين 』**
 ${prefix}**bcs --> 『 يرودكاست كرسال عادى 』**
@@ -26,15 +26,11 @@ ${prefix}**bca --> 『 برودكاست الى رتب معين 』**
 ${prefix}**bce --> 『 برودكاست متعداد بركشن 』**
 ${prefix}**inv --> 『 دعوه بوت 』**
 ${prefix}**Sup --> 『 دعم الفنى الى بوت 』**
-${prefix}**bot --> 『 معلومات بوت 』**`)
-  .setColor("#000000")
-  .addField("Done | تــــم" , ":envelope: | :sleuth_or_spy::skin-tone-3:شيك علي في الخاص")
-  
-  
-  
-  message.channel.sendEmbed(embed);
+${prefix}**bot --> 『 معلومات بوت 』**`);
+
+
   }
-  });
+});
 
 const adminprefix = "!";
 const devs = ['564414567946387487']
