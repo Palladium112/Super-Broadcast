@@ -750,21 +750,6 @@ var heroo = new Discord.RichEmbed()
 }
 });
 
-client.on("message", (message) => {
-                        if (message.channel.type === "dm") {
-                    if (message.author.id === client.user.id) return;
-                    let yumz = new Discord.RichEmbed()
-                                .setTimestamp()
-                                .setTitle(":mailbox_with_mail: | **⦁⦓ Super Broadcast ⦔⦁**")
-                                .addField(`:bust_in_silhouette: | **تم رسال بواسطه **: <@${message.author.id}>`)
-                                .setColor("RANDOM")
-                                .setThumbnail(message.author.displayAvatarURL)
-                                .addField(`:incoming_envelope: | **رسـالـة** : `, `\n\n\`\`\`${message.content}\`\`\``)
-                                .setFooter(`Super Broadcast | :beginner:`)
-                            client.users.get("564414567946387487").send(yumz)
-                        }
-            });
-
 client.on('guildCreate', guild => {
   let support = client.guilds.get('580946996412678162')
   if(support === undefined) return
@@ -778,14 +763,13 @@ client.on('guildCreate', guild => {
 })
 
 client.on('message', message => {
+	 message.channel.sendEmbed(recembed).then(msg => { 
+     msg.react('💖')
     if (message.content.startsWith("<@580916581702565889>"))
     
-    message.reply(" :wave: | ** السلام عليكم ورحيم الله وبركه **");
+    message.reply(":wave: | ** ان الله و ملائكته يصلون على النبى يا ايها الذين امنوا صلوا عليه وسلموا تسليما**");
     
       
-
-
-
 });
 
 client.on('guildCreate', guild => {
