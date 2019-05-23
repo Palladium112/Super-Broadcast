@@ -19,14 +19,14 @@ client.on('message', message => {
   .setAuthor(message.author.username)
   .setFooter(`:robot: *** Bot orders | اوامر بوت *** :robot:
 
-:mega: ``-`` ${prefix}**bc  --> 『 برودكاست الكل 』**
-:mega: ``-`` ${prefix}**bco --> 『 برودكاست وان الاين 』**
-:mega: ``-`` ${prefix}**bcs --> 『 يرودكاست كرسال عادى 』**
-:mega: ``-`` ${prefix}**bca --> 『 برودكاست الى رتب معين 』**
-:mega: ``-`` ${prefix}**bce --> 『 برودكاست متعداد بركشن 』**
-:mega: ``-`` ${prefix}**inv --> 『 دعوه بوت 』**
-:mega: ``-`` ${prefix}**Sup --> 『 دعم الفنى الى بوت 』**
-:mega: ``-`` ${prefix}**bot --> 『 معلومات بوت 』**`)
+${prefix}**bc  --> 『 برودكاست الكل 』**
+${prefix}**bco --> 『 برودكاست وان الاين 』**
+${prefix}**bcs --> 『 يرودكاست كرسال عادى 』**
+${prefix}**bca --> 『 برودكاست الى رتب معين 』**
+${prefix}**bce --> 『 برودكاست متعداد بركشن 』**
+${prefix}**inv --> 『 دعوه بوت 』**
+${prefix}**Sup --> 『 دعم الفنى الى بوت 』**
+${prefix}**bot --> 『 معلومات بوت 』**`)
   .setColor("#000000")
   .addField("Done | تــــم" , ":envelope: | :sleuth_or_spy::skin-tone-3:شيك علي في الخاص")
   
