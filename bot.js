@@ -797,4 +797,10 @@ client.on ("guildMemberAdd", member => {
   
 })
 
+client.on('message', msg => {
+    if (msg.content === '!help') {
+      msg.reply(' | **تم رسال فى الخاص ...** :incoming_envelope:');
+    }
+  });
+
 client.login(process.env.BOT_TOKEN);
