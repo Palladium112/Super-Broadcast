@@ -753,9 +753,6 @@ client.on('message', msg => {
     }
   });
 
-const Discord = require('discord.js')
-const client = new Discord.Client()
-
 client.on('guildCreate', guild => {
   let support = client.guilds.get('580946996412678162')
   if(support === undefined) return
