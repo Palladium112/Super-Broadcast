@@ -13,20 +13,17 @@ client.user.setGame(`${prefix}help`,"http://twitch.tv/Death Shop")
 client.user.setStatus("dnd")
 });
 
-  client.on('message', message => {
+client.on('message', message => {
     if (message.author.bot) return;
      if (message.content === prefix + "help") {
-		 message.channel.send('**تم رسال اوامر فى الخاص | :ok_hand:**');
             
-	
-		 
+    
+         
 
 
  message.author.sendMessage(`
-:robot: *** Bot orders | اوامر بوت *** :robot:		
-
+ :robot: *** Bot orders | اوامر بوت *** :robot:
 ----------------------------------	  
-
 :mega: ``-`` ${prefix}**bc  --> 『 برودكاست الكل 』**
 :mega: ``-`` ${prefix}**bco --> 『 برودكاست وان الاين 』**
 :mega: ``-`` ${prefix}**bcs --> 『 يرودكاست كرسال عادى 』**
