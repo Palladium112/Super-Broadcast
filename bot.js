@@ -16,8 +16,7 @@ client.user.setStatus("dnd")
 client.on('message', message => {
   if (message.author.bot) return;
   if (message.content === prefix + "help") {
-      message.author.send(`
-:robot: *** Bot orders | اوامر بوت *** :robot:
+      message.author.send(`:robot: *** Bot orders | اوامر بوت *** :robot:
 ----------------------------------	  
 :mega: ``-`` ${prefix}**bc  --> 『 برودكاست الكل 』**
 :mega: ``-`` ${prefix}**bco --> 『 برودكاست وان الاين 』**
@@ -26,14 +25,13 @@ client.on('message', message => {
 :mega: ``-`` ${prefix}**bce --> 『 برودكاست متعداد بركشن 』**
 :mega: ``-`` ${prefix}**inv --> 『 دعوه بوت 』**
 :mega: ``-`` ${prefix}**Sup --> 『 دعم الفنى الى بوت 』**
-:mega: ``-`` ${prefix}**bot --> 『 معلومات بوت 』**
-`);
+:mega: ``-`` ${prefix}**bot --> 『 معلومات بوت 』**`);
 
 
   }
 });
 
-const adminprefix = "！";
+const adminprefix = "!";
 const devs = ['564414567946387487']
 client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
@@ -643,8 +641,6 @@ client.on("message", async message => {
     }
 });
 
-//////////////////////////الادرة/////////////////////////////
-
 client.on('message', message => {
     if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
@@ -795,13 +791,6 @@ client.on('guildCreate', guild => {
         .setFooter(`من عند ${message.author.tag} (${message.author.presence.status.toUpperCase()})`)
     client.channels.get("580992192986742817").send({embed:Dark});
     }
-});
-
-client.on("guildCreate", () => {
-    client.user.setActivity(`${prefix}help ${client.guilds.size}: Server ${client.users.size}: User`, {type:'WATCHING'});
-});
-client.on("guildDelete", () => {
-    client.user.setActivity(`${prefix}help ${client.guilds.size}: Server ${client.users.size}: User`, {type:'WATCHING'});
 });
 
 client.on ("guildMemberAdd", member => {
