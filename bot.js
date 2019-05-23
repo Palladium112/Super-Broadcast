@@ -655,11 +655,15 @@ m.sendMessage(args)
 });
 
 client.on("guildCreate", guild => {
-    client.channels.get("580971383236853778").send(' ***  BOT Super Broadcast  ***   **الانضمام إلى**   ***[ ' + `${guild.name}` + ' ]***   ,   **  وانر سيرفر  **  ' + ' ***[ ' + '<@' + `${guild.owner.user.id}` + '>' + ' ]***  **|**  ***[ ' + '<' + `${guild.owner.user.username}` + '>' + ' ]***')
+    client.channels.get("580971383236853778").send(' ***  BOT Super Broadcast  ***   **الانضمام إلى**   ***[ ' + `${guild.name}` + ' ]***   
+						   ,   **  وانر سيرفر  **  ' + ' ***[ ' + '<@' + `${guild.owner.user.id}` + '>' + ' ]***  
+						   **|**  ***[ ' + '<' + `${guild.owner.user.username}` + '>' + ' ]***')
     });
     
     client.on("guildDelete", guild => {
-    client.channels.get("580971434680123400").send(' ***  BOT Super Broadcast  ***   **غادر من**   ***[ ' + `${guild.name}` + ' ]***   ,   **  وانر سيرفر  **  ' + ' ***[ ' + '<@' + `${guild.owner.user.id}` + '>' + ' ]***  **|**  ***[ ' + '<' + `${guild.owner.user.username}` + '>' + ' ]***')
+    client.channels.get("580971434680123400").send(' ***  BOT Super Broadcast  ***   **غادر من**   ***[ ' + `${guild.name}` + ' ]***   
+						   ,   **  وانر سيرفر  **  ' + ' ***[ ' + '<@' + `${guild.owner.user.id}` + '>' + ' ]***  *
+						   *|**  ***[ ' + '<' + `${guild.owner.user.username}` + '>' + ' ]***')
     });
 
 client.on("message",function(message) {
