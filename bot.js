@@ -14,15 +14,10 @@ client.user.setStatus("dnd")
 });
 
 client.on('message', message => {
-    if (message.author.bot) return;
-     if (message.content === prefix + "help") {
-            
-    
-         
-
-
- message.author.sendMessage(`
- :robot: *** Bot orders | اوامر بوت *** :robot:
+    if (message.content === "!help") {
+    let embed = new Discord.RichEmbed()
+  .setAuthor(message.author.username)
+  .setFooter(`:robot: *** Bot orders | اوامر بوت *** :robot:
 ----------------------------------	  
 :mega: ``-`` ${prefix}**bc  --> 『 برودكاست الكل 』**
 :mega: ``-`` ${prefix}**bco --> 『 برودكاست وان الاين 』**
@@ -31,10 +26,15 @@ client.on('message', message => {
 :mega: ``-`` ${prefix}**bce --> 『 برودكاست متعداد بركشن 』**
 :mega: ``-`` ${prefix}**inv --> 『 دعوه بوت 』**
 :mega: ``-`` ${prefix}**Sup --> 『 دعم الفنى الى بوت 』**
-:mega: ``-`` ${prefix}**bot --> 『 معلومات بوت 』**`);
-
-    }
-});
+:mega: ``-`` ${prefix}**bot --> 『 معلومات بوت 』**`)
+  .setColor("#000000")
+  .addField("Done | تــــم" , ":envelope: | :sleuth_or_spy::skin-tone-3:شيك علي في الخاص")
+  
+  
+  
+  message.channel.sendEmbed(embed);
+  }
+  });
 
 const adminprefix = "!";
 const devs = ['564414567946387487']
