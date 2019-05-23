@@ -654,17 +654,34 @@ m.sendMessage(args)
 }
 });
 
-client.on("guildCreate", guild => {
-    client.channels.get("580971383236853778").send(' ***  BOT Super Broadcast  ***   **الانضمام إلى**   ***[ ' + `${guild.name}` + ' ]***   
-						   ,   **  وانر سيرفر  **  ' + ' ***[ ' + '<@' + `${guild.owner.user.id}` + '>' + ' ]***  
-						   **|**  ***[ ' + '<' + `${guild.owner.user.username}` + '>' + ' ]***')
+client.on('guildCreate', guild => {
+const embed = new Discord.RichEmbed()
+.setAuthor(`<:Super:580989761540456449> Super Broadcast <:Super:580989761540456449>`)
+.setDescription(`**
+⇏ | اسم سيرفر : \`${guild.name}\`
+⇏ | اى دى سيرفر : \`${guild.id}\`
+⇏ | وانر سيرفر : ${guild.owner}
+⇏ | عداد الاعضاء : \`${guild.memberCount}\`
+⇏ | قنوات : \`${client.guilds.size}\`**`)
+.setColor("#f3ae10")
+client.channels.get("580971383236853778").send({
+embed
     });
-    
-    client.on("guildDelete", guild => {
-    client.channels.get("580971434680123400").send(' ***  BOT Super Broadcast  ***   **غادر من**   ***[ ' + `${guild.name}` + ' ]***   
-						   ,   **  وانر سيرفر  **  ' + ' ***[ ' + '<@' + `${guild.owner.user.id}` + '>' + ' ]***  *
-						   *|**  ***[ ' + '<' + `${guild.owner.user.username}` + '>' + ' ]***')
+});
+client.on('guildDelete', guild => {
+    const embed = new Discord.RichEmbed()
+    .setAuthor(`<:Super:580989761540456449> Super Broadcast <:Super:580989761540456449>`)
+    .setDescription(`**
+⇏ | اسم سيرفر : \`${guild.name}\`
+⇏ | اى دى سيرفر : \`${guild.id}\`
+⇏ | وانر سيرفر : ${guild.owner}
+⇏ | عداد الاعضاء : \`${guild.memberCount}\`
+⇏ | قنوات : \`${client.guilds.size}\`**`)
+.setColor("Black")
+client.channels.get("580971434680123400").send({
+    embed
     });
+});
 
 client.on("message",function(message) {
 	var prefix = "!";
