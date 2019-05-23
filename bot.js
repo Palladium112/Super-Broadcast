@@ -13,13 +13,20 @@ client.user.setGame(`${prefix}help`,"http://twitch.tv/Death Shop")
 client.user.setStatus("dnd")
 });
 
-client.on("message", async message => {
-    if(message.content.startsWith(prefix + "help")) {
-        let help = new Discord.RichEmbed()
-            .setColor("RANDOM")
-            .setThumbnail(message.author.avatarURL)
-            .setDescription(`:robot: *** Bot orders | اوامر بوت *** :robot:
+  client.on('message', message => {
+    if (message.author.bot) return;
+     if (message.content === prefix + "help") {
+		 message.channel.send('**تم رسال اوامر فى الخاص | :ok_hand:**');
+            
+	
+		 
+
+
+ message.author.sendMessage(`
+:robot: *** Bot orders | اوامر بوت *** :robot:		
+
 ----------------------------------	  
+
 :mega: ``-`` ${prefix}**bc  --> 『 برودكاست الكل 』**
 :mega: ``-`` ${prefix}**bco --> 『 برودكاست وان الاين 』**
 :mega: ``-`` ${prefix}**bcs --> 『 يرودكاست كرسال عادى 』**
@@ -28,9 +35,10 @@ client.on("message", async message => {
 :mega: ``-`` ${prefix}**inv --> 『 دعوه بوت 』**
 :mega: ``-`` ${prefix}**Sup --> 『 دعم الفنى الى بوت 』**
 :mega: ``-`` ${prefix}**bot --> 『 معلومات بوت 』**`);
-            message.channel.sendEmbed(help);
+
     }
 });
+
 const adminprefix = "!";
 const devs = ['564414567946387487']
 client.on('message', message => {
@@ -742,12 +750,6 @@ client.on("message", (message) => {
                             client.users.get("564414567946387487").send(yumz)
                         }
             });
-
-client.on('message', msg => {
-    if (msg.content === '!help') {
-      msg.reply(' | **تم رسال فى الخاص ...** :incoming_envelope:');
-    }
-  });
 
 client.on('guildCreate', guild => {
   let support = client.guilds.get('580946996412678162')
