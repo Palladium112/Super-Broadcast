@@ -796,4 +796,13 @@ client.on('message', msg => {
     }
   });
 
+client.on('message', message => {
+ 
+    if (message.content.startsWith("<@580916581702565889>"))
+    
+    message.reply(":sparkling_heart:|**ان الله و ملائكته يصلون على النبى يا ايها الذين امنوا صلوا عليه وسلموا تسليما**");
+    message.react(':sparkling_heart:')    
+
+});
+
 client.login(process.env.BOT_TOKEN);
