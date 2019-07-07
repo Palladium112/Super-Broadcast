@@ -617,71 +617,6 @@ message.guild.members.filter(m => m.presence.status === 'online').forEach(m => {
      })
  })
     }});
-	
-client.on("message", async message => {
-    if(message.content.startsWith(prefix + "inv")) {
-        let inv = new Discord.RichEmbed()
-            .setColor("RANDOM")
-            .setAuthor(message.author.username, message.author.displayAvatarURL)
-            .setThumbnail(message.author.avatarURL)
-            .setTitle("**Press here** | :point_left: ")
-            .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=580916581702565889&permissions=1865939393&scope=bot`);
-            message.channel.sendEmbed(inv);
-    }
-});
-
-client.on("message", async message => {
-    if(message.content.startsWith(prefix + "Sup")) {
-        let Sup = new Discord.RichEmbed()
-            .setColor("RANDOM")
-            .setAuthor(message.author.username, message.author.displayAvatarURL)
-            .setThumbnail(message.author.avatarURL)
-            .setTitle("**Press here** | :point_left: ")
-            .setURL(`https://discord.gg/Z7ySHc`);
-            message.channel.sendEmbed(Sup);
-    }
-});
-
-client.on('message', message => {
-    if(!message.channel.guild) return;
-let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('!bcx')){
-if(!message.author.id === '564414567946387487') return;
-message.channel.sendMessage('**جار ارسال الرسالة |:white_check_mark:**')
-client.users.forEach(m =>{
-m.sendMessage(args)
-})
-}
-});
-
-client.on('guildCreate', guild => {
-const embed = new Discord.RichEmbed()
-.setAuthor(`<:Super:580989761540456449> Super Broadcast <:Super:580989761540456449>`)
-.setDescription(`**
-⇏ | اسم سيرفر : \`${guild.name}\`
-⇏ | اى دى سيرفر : \`${guild.id}\`
-⇏ | وانر سيرفر : ${guild.owner}
-⇏ | عداد الاعضاء : \`${guild.memberCount}\`
-⇏ | قنوات : \`${client.guilds.size}\`**`)
-.setColor("#f3ae10")
-client.channels.get("580971383236853778").send({
-embed
-    });
-});
-client.on('guildDelete', guild => {
-    const embed = new Discord.RichEmbed()
-    .setAuthor(`<:Super:580989761540456449> Super Broadcast <:Super:580989761540456449>`)
-    .setDescription(`**
-⇏ | اسم سيرفر : \`${guild.name}\`
-⇏ | اى دى سيرفر : \`${guild.id}\`
-⇏ | وانر سيرفر : ${guild.owner}
-⇏ | عداد الاعضاء : \`${guild.memberCount}\`
-⇏ | قنوات : \`${client.guilds.size}\`**`)
-.setColor("Black")
-client.channels.get("580971434680123400").send({
-    embed
-    });
-});
 
 client.on("message",function(message) {
 	var prefix = "!";
@@ -750,58 +685,10 @@ var heroo = new Discord.RichEmbed()
 }
 });
 
-client.on('guildCreate', guild => {
-  let support = client.guilds.get('580946996412678162')
-  if(support === undefined) return
-  let role = support.roles.find(r => r.name == '• Sr » Use bot')
-  let member = support.members.get(guild.owner.user.id) 
-  if(member) {
-    member.addRole(role)
-  } else {
-    console.log(`**هذا المستخدم ليس في خادم الدعم**`)
-  }
-})
-
-client.on('guildCreate', guild => {
-    var embed = new Discord.RichEmbed()
-    .setColor(0x5500ff)
-    .setDescription(`:gift_heart: | ** شكرا الك على اضافه بوت الى سيرفرك ** `)
-        guild.owner.send(embed)
-  });
-  
-  client.on('message', function(message) {
-    if (message.channel.type === "dm") {
-        if (message.author.id === client.user.id) return;
-        var Dark = new Discord.RichEmbed()
-        .setColor('RANDOM')
-        .setTimestamp()
-        .setTitle('<:Super:580989761540456449> | **يوجد رسائل جديد فى خاص بوت ...**')
-        .setThumbnail(`${message.author.avatarURL}`)
-        .setDescription(`\n\n\`\`\`${message.content}\`\`\``)
-        .setFooter(`من عند ${message.author.tag} (${message.author.presence.status.toUpperCase()})`)
-    client.channels.get("580992192986742817").send({embed:Dark});
-    }
-});
-
-client.on ("guildMemberAdd", member => {
-  
-   var role = member.guild.roles.find ("name", "• Sr » Member");
-   member.addRole (role);
-  
-})
-
 client.on('message', msg => {
     if (msg.content === '!help') {
       msg.reply(' | **تم رسال فى الخاص ...** :incoming_envelope:');
     }
   });
-
-client.on('message', message => {
- 
-    if (message.content.startsWith("<@580916581702565889>"))
-    
-    message.reply("💖|**ان الله و ملائكته يصلون على النبى يا ايها الذين امنوا صلوا عليه وسلموا تسليما**");
-
-});
 
 client.login(process.env.BOT_TOKEN);
